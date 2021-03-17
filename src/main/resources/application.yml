@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    path: F:\logs
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ntss_db6?currentSchema=ntss&stringtype=unspecified
+    driver-class-name: org.postgresql.Driver
+    username: nkk6
+    password: nkk6
+#Mapper配置加载路径
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

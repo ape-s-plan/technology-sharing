@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jfxb.uframe.mapper.UserMapper">
+    <!-- 对应查数据，带返回值，无参数入力 -->
+    <select id="selectAll" resultType="com.jfxb.uframe.entity.User">
+        select * from users
+    </select>
+
+    <!-- 关于改数据，总体入力是不好的，这里单纯为了说明问题 -->
+    <!-- 想了想怕误导别人这里就不写了 -->
+
+    <!-- 新增用户，不带返回值，带入力参数 -->
+    <insert id="insertUser" parameterType="com.jfxb.uframe.entity.User">
+        insert into users(name,sex,age) values(#{test_name},#{test_sex},#{test_age})
+    </insert>
+
+    <delete id="deleteByName" parameterType="String">
+        delete from user where name = #{name}
+    </delete>
+</mapper>
