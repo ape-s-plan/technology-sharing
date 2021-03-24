@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Component
 public class User {
-    public String test_name;
-    public String test_sex;
-    public Integer test_age;
+    public String name;
+    public String sex;
+    public Integer age;
 }

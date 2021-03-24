@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class TestController {
 
@@ -19,8 +21,9 @@ public class TestController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @GetMapping("/api/getAll")
+    @GetMapping("/getAll")
     public ResponseEntity<?> getAll() throws Exception {
-        return new ResponseEntity(userService.getAll(), HttpStatus.OK);
+        List<User> userall = userService.getAll();
+        return new ResponseEntity(userall, HttpStatus.OK);
     }
 }
