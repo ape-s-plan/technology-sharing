@@ -12,8 +12,8 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: "http://localhost:8080/",
-        changeOrigins: true,// 允许跨域
+        target: 'http://localhost:8080',
+        chunkOrigins: true,// 允许跨域
         pathRewrite: {
           '^/api': '' // 路径重写，使用"/api"代替target.
         }

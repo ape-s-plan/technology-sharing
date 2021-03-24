@@ -53,7 +53,7 @@ function handleError(error) {
  */
 const AxiosHelper = class {
   constructor() {
-    this.http = axios.create({ baseURL: "http://localhost:8080/api" });
+    this.http = axios.create({ baseURL: "/api" });
 
     this.http.interceptors.request.use(config => {
 

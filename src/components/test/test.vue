@@ -35,16 +35,10 @@ export default {
   },
 
   methods: {
-    getValue() {
-      let aa = ApiHelper.get('getAll');
+    async getValue() {
+      let aa = await ApiHelper.get('getAll');
       console.log(aa);
-      this.datalist = [
-        {
-          name: 'bb',
-          age: '16',
-          sex: 'nv',
-        },
-      ];
+      this.datalist = aa.data
     },
   },
 };
